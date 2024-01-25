@@ -1,0 +1,21 @@
+steps:
+- name: 'docker' 
+  args: ['build','-t','asia.gcr.io/$PROJECT_ID/gcpdevops']
+images: 
+- 'asia.gcr.io/$PROJECT_ID/gcpdevops' 
+
+
+
+# steps:
+# - name: "asia.gcr.io/cloud-builders/docker"
+#   args: ["build", "-t", "asia.gcr.io/$PROJECT_ID/gcpdevops", "."]
+# - name: "asia.gcr.io/cloud-builders/docker"
+#   args: ["push", "asia.gcr.io/$PROJECT_ID/gcpdevops"]
+# - name: "asia.gcr.io/cloud-builders/gke-deploy"
+#   args:
+#   - run
+#   - --filename=gke.yaml
+#   - --image=asia.gcr.io/$PROJECT_ID/gcpdevops
+#   - --location=asia-southeast1-a
+#   - --cluster=gke-kodekloud
+#   - --namespace=gke-devops-prod
